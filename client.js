@@ -12,16 +12,6 @@ const connect = function (data) {
     conn.write("Name: ESA")
   })
 
-  conn.on("connect", () => {
-    conn.write("Move: up");
-  })
-
-  
-  conn.on("connect", () => {
-    setInterval(() => {
-    conn.write("Move: up");
-    }, 50);
-  })
 
   conn.on("data", (data) => {
     console.log(data);
